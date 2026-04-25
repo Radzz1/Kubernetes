@@ -4,8 +4,8 @@ metadata:
   name: nginx-deployment-clusterip
 
 spec:
+  type: ClusterIP
   selector:
-    type: ClusterIP
     app: nginx-deployment
   ports:
     - protocol: TCP
