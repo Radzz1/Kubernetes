@@ -6,7 +6,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector: 
-    app : nginx-Load-Balancer-pod
+    app : nginx-Load-Balancer-Deployment
   ports:
     - protocol: TCP
       port: 80
