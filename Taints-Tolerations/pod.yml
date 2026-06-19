@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: taint-pod
+
+spec:
+  tolerations:
+  - key: "dedicated"
+    operator: "Equal"
+    value: "database"
+    effect: "NoSchedule"
+  containers:
+  - name: nginx
+    image: nginx:latest
+    ports:
+    - containerPort: 80
